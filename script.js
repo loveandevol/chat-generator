@@ -20,6 +20,9 @@ function resetChat() {
   chats = [];
   updatePreview();
   updateOutput();
+
+  document.getElementById('profile').value = "";
+  document.getElementById('message').value = "";
 }
 
 function updatePreview() {
