@@ -1,13 +1,20 @@
-
 let chats = [];
 
 function addChat() {
   const side = document.querySelector('input[name="side"]:checked').value;
-  const profile = document.getElementById('profile').value.trim();
   const message = document.getElementById('message').value.trim();
+  const leftProfile = document.getElementById('left-profile').value.trim();
+  const rightProfile = document.getElementById('right-profile').value.trim();
 
-  if (!profile || !message) {
-    alert("프로필과 내용을 모두 입력해주세요.");
+  if (!message) {
+    alert("내용을 입력해주세요.");
+    return;
+  }
+
+  const profile = side === "leftt" ? leftProfile : rightProfile;
+
+  if (!profile) {
+    alert(`${side === "leftt" ? "왼쪽" : "오른쪽"} 프로필 사진 URL을 입력해주세요.`);
     return;
   }
 
@@ -21,8 +28,10 @@ function resetChat() {
   updatePreview();
   updateOutput();
 
-  document.getElementById('profile').value = "";
   document.getElementById('message').value = "";
+  // 프로필 URL은 초기화하지 않음. 초기화하려면 아래 주석 해제:
+  // document.getElementById('left-profile').value = "";
+  // document.getElementById('right-profile').value = "";
 }
 
 function updatePreview() {
