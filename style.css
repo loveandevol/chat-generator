@@ -1,0 +1,328 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp.min.css");
+
+@font-face {
+    font-family: 'WandocleanseaB';
+    src: url('images/WandocleanseaB.ttf') ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --font-family: 'Pretendard JP Variable', sans-serif;
+  --main-bg: #f2f4f8;
+  --chat-box-bg: white;
+  --primary-color: #5D5D68;
+  --accent-color: #ffbeaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent !important;
+  font-family: var(--font-family);
+}
+
+body {
+  background: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+}
+
+.input-area {
+  width: 400px;
+  background: var(--chat-box-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000010;
+}
+
+h2{ margin-bottom: 10px;}
+
+h2, h3 {
+  color: var(--primary-color);
+}
+
+ul,ol,li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li.nonelist{display: inline-block;}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+input[type="radio"] {
+  margin: 0 5px 0 15px;
+  accent-color: var(--accent-color);
+}
+
+button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+button:hover {
+  background: #ff8f73;
+}
+
+button.copycode{
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.copycode-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+textarea {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+}
+
+.chat-wrap {
+  font-size: 12px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: var(--font-family);
+  padding: 15px;
+  background: var(--chat-box-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00000010;
+}
+
+.chat-row {
+  display: flex;
+  align-items: start;
+}
+.chat-row.right {
+  justify-content: flex-end;
+}
+.chat-row.leftt {
+  justify-content: flex-start;
+}
+
+.chat-bb {
+  font-size: 1.3em;
+  padding: .7em 1.1em;
+  max-width: 65%;
+  position: relative;
+  filter: drop-shadow(0 0 0.35rem #00000010);
+  word-break: break-word;
+  line-height: 1.5;
+  margin-top: .3em;
+}
+.chat-bb.right {
+  color: var(--primary-color);
+  border-radius: 22px 1px 22px 22px;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.8); /* 살짝 투명한 흰 배경 */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* 밝은 테두리 */
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4),  /* 안쪽 발광 */
+  0 0 8px rgba(0, 0, 0, 0.05);
+}
+.chat-bb.leftt {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 1px 22px 22px 22px;
+  margin-right: auto;
+  overflow: hidden;
+}
+.chat-bb.leftt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 0 0 22px 22px;
+  background: linear-gradient(to top, #ffbeaa30, transparent); /* 예시: 검정 투명 그라데이션 */
+  pointer-events: none; /* 클릭 등 방해 안 되도록 */
+}
+
+.chat-profile {
+  width: 53px;
+  height: 53px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.chat-profile.leftt {
+  margin-right: 10px;
+}
+.chat-profile.right {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .chat-wrap{padding: 10px 0; gap: 12px;}
+  .chat-bb {font-size: 1.3em; padding: .6em 1em; max-width: 65%;}
+  .chat-bb.right{border-radius: 22px 1px 22px 22px;}
+  .chat-bb.leftt{border-radius: 1px 22px 22px 22px;}
+  .chat-profile-r{width: 45px; height: 45px;}
+  .chat-profile-l{width: 45px; height: 45px;}
+	.chat-bb p{line-height: 1.4; }
+}
+
+.lnd-sns{
+    display: flex;
+    justify-content: flex-start;
+		margin: 6px 0;
+}
+.lnd-leftt{
+    width: 12%;
+}
+.lnd-right{
+    width: 88%;
+    padding-left: 15px;
+}
+
+.lnd-sns-icon{
+    content: "";
+    display: block;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lnd-sns-name{
+    font-size: 1.6em;
+    font-family: 'WandocleanseaB';
+    color: #c16a55;
+    line-height: 1;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.lnd-sns-content{
+    font-family: "Pretendard Variable", "Pretendard JP Variable";
+    font-size: 1.3em;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.lnd-sns-comment{
+    background-color: #eae9ee80;
+    font-family: "Pretendard Variable", "Pretendard JP Variable";
+    font-size: 1.3em;
+    font-weight: 500;
+    padding: 10px;
+    margin: 10px 0;
+}
+.lnd-sns-comment p{
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+/* .lnd-sns-comment i{
+    color: #eb6b6a;
+    font-size: 1.5em;
+    margin-right: 15px;
+} */
+.lnd-sns-like{
+    border-bottom: 1px solid rgb(214, 214, 214);
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 0 10px 0;
+    margin-bottom: 10px;
+}
+
+.lnd-sns-like::before{
+    content: "\f004";
+    font-family: "FontAwesome";
+    color: #eb6b6a;
+    font-size: 1.5em;
+    margin-right: 13px;
+}
+
+.commenter{
+    color: #c16a55;
+}
+
+.mahiru{
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKTgjn%2FbtsN5RNFu8L%2F7yhxcJl1D7FccRrkj7bEj0%2Fimg.png");
+}
+
+.homura{
+    background-image: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FVj64F%2FbtsMF7D3Dql%2FNWrUy6Xx5kJaykDKNm49IK%2Fimg.png");
+}
+
+@media (max-width: 600px){
+    .lnd-leftt{width: 15%;}
+    .lnd-right{width: 85%;}
+    .lnd-sns-icon{width: 45px;}
+    .lnd-sns-name{font-size: 1.5em;}
+    .lnd-sns-comment{font-size: 1.2em;}
+}
+
+.scriptbk{
+	padding: 10px;
+}
+
+.scriptbk .sc_name {
+  color: #c16a55;
+	font-family: 'WandocleanseaB';
+	font-size: 1.4em;
+	margin-bottom: 6px !important;
+	margin-top: 8px !important;
+}
+
+.scriptbk .script {
+	font-size: 1.4em;
+	margin-bottom: 6px !important;
+	font-weight: 500;
+	font-family: "Pretendard JP Variable";
+	padding-left: 1em;
+	line-height: 1.3;
+}
+
+.scriptbk p:not(.sc_name):not(.script) {
+  font-size: 1.3em;
+	margin-bottom: 4px !important;
+	font-family: "Pretendard JP Variable";
+	line-height: 1.5;
+}

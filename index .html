@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>채팅 생성기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+  <div class="input-area">
+    <h2>채팅 생성</h2>
+    <ul>종류:
+    <li class="nonelist"><label><input type="radio" name="side" value="leftt"> 왼쪽</label></li>
+    <li class="nonelist"><label><input type="radio" name="side" value="right" checked> 오른쪽</label></li>
+    </ul>
+    <label>프로필 사진: <input type="text" id="profile" placeholder="이미지 URL 입력"></label>
+    <label>채팅 내용: <input type="text" id="message" placeholder="내용 입력"></label>
+    <button onclick="addChat()">채팅 추가</button>
+    <button onclick="resetChat()">초기화</button>
+  </div>
+
+  <h3>미리보기</h3>
+  <div class="chat-wrap" id="preview"></div>
+
+  <h3>완성된 HTML 코드</h3>
+  <textarea id="output" rows="10" style="width:100%"></textarea>
+  <div class="copycode-wrap"><button class="copycode" onclick="copyCode()">코드 복사</button></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
