@@ -326,3 +326,17 @@ textarea {
 	font-family: "Pretendard JP Variable";
 	line-height: 1.5;
 }
+
+
+/* 삭제 버튼 스타일 */
+.delete-btn {
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  margin: 0 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 우클릭 시 행 강조 (선택 사항) */
+.chat-row:hover {
+  cursor: context-menu;
+}
